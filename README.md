@@ -70,4 +70,5 @@ sh allDependent.sh
 ```
 ## Additional Information
 For *De novo* assembly, if too much data was left after “Remove low complexity reads”, to reduce the burden of computing, the data can be downsized to a certain amount (Such as data amount equivalent to about 100X of HCoV-19 genome).
+
 For consensus from pilon, the default depth cutofff was set to 10X, and the position with depth lower than 10X would be masked to N.
