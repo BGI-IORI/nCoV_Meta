@@ -23,7 +23,7 @@ Other required tools:
 * bedtools v2.23.0 (https://bedtools.readthedocs.io/en/latest/)
 
 # Installation
-git clone https://github.com/BGI-IORI/nCoV.git
+`git clone https://github.com/BGI-IORI/nCoV.git`
 
 ## Usage
 1.Build Kraken database index:
