@@ -1,4 +1,4 @@
-#nCoV_Finder
+# nCoV_Finder
 
 ## Introduction
 nCoV Finder is a pipeline for HCoV-19 genome analyzing. The pipeline could  efficiently classify HCoV-19 like reads from Massively Parallel Sequencing (MPS) data with Kraken, and get the virus genome with SPAdes and Pilon .
