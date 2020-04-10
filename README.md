@@ -36,7 +36,7 @@ git clone https://github.com/BGI-IORI/nCoV.git
 ```
 kraken-build --build --threads 8 --db ./YourDBpath/ 
 #Notes: 
-#Put nCoV.fa file in the fold named "library" in "./YourDBpath/". 
+#Put CoV.fa file in the fold named "library" in "./YourDBpath/". 
 #Download taxonomy file from NCBI and put in "./YourDBpath/“. 
 #Detailed description about Kraken index can be found in the 
 #website http://ccb.jhu.edu/software/kraken/MANUAL.html#custom-databases.
