@@ -29,20 +29,20 @@ git clone https://github.com/BGI-IORI/nCoV.git
 
 ## Usage
 1.Build Kraken database index:
-kraken-build --build --threads 8 --db ./YourDBpath/ 
-#Notes: Put nCoV.fa file in the fold named "library" in "./YourDBpath/". Download taxonomy file from NCBI and put in "./YourDBpath/“. Detailed description about Kraken index can be found in the website http://ccb.jhu.edu/software/kraken/MANUAL.html#custom-databases.
+```kraken-build --build --threads 8 --db ./YourDBpath/ 
+#Notes: Put nCoV.fa file in the fold named "library" in "./YourDBpath/". Download taxonomy file from NCBI and put in "./YourDBpath/“. Detailed description about Kraken index can be found in the website http://ccb.jhu.edu/software/kraken/MANUAL.html#custom-databases.```
 
 2.Build BWA index:
-bwa -index HCoV-19.fa
+```bwa -index HCoV-19.fa```
 
 3.samtools index:
-samtools faidx HCoV-19.fa
+```samtools faidx HCoV-19.fa```
 
 4.Edit the input.config file, and change each software and database path to your own path.
-perl nCoV_Finder.pl -i data.txt -c input.config -o ./outpath/
+```perl nCoV_Finder.pl -i data.txt -c input.config -o ./outpath/
 cd ./outpath/shellall
 sh allDependent.sh
-#Notes: data.txt includes three columns:  sample_name seq.1.fq.gz seq2.fq.gz
+#Notes: data.txt includes three columns:  sample_name seq.1.fq.gz seq2.fq.gz```
 
 ## Output
 1.De novo assembly from SPAdes
