@@ -1,11 +1,15 @@
 # nCoV_Finder
 
 ## Introduction
-nCoV Finder is a pipeline for HCoV-19 genome analyzing. The pipeline could  efficiently classify HCoV-19 like reads from Massively Parallel Sequencing (MPS) data with Kraken, and get the virus genome with SPAdes and Pilon .
+nCoV Finder is a pipeline for HCoV-19 genome analyzing. The pipeline could  efficiently classify CoV like reads from Massively Parallel Sequencing (MPS) data with Kraken, and get the virus genome with SPAdes and Pilon.
 
 ![Image](https://github.com/BGI-IORI/nCoV/blob/master/Image.png)
 
 ## Requirements:
+perl: v5.22.0
+python: v2.7.16
+java: v1.8.0 
+
 For HCoV-19 like reads classification:
 * Kraken v1.1 (https://github.com/DerrickWood/kraken)
 For data quality control:
