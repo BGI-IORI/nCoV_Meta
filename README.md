@@ -2,8 +2,8 @@
 
 ## Introduction
 nCoV Finder is a pipeline for HCoV-19 genome analyzing. The pipeline could  efficiently classify HCoV-19 like reads from Massively Parallel Sequencing (MPS) data with Kraken, and get the virus genome with SPAdes and Pilon .
-![Image](https://github.com/BGI-IORI/nCoV/blob/master/Image.png)
 
+![Image](https://github.com/BGI-IORI/nCoV/blob/master/Image.png)
 
 ## Requirements:
 For HCoV-19 like reads classification:
@@ -25,13 +25,14 @@ Other required tools:
 # Installation
 git clone https://github.com/BGI-IORI/nCoV.git
 
-
-
 ## Usage
 1.Build Kraken database index:
 ```
 kraken-build --build --threads 8 --db ./YourDBpath/ 
-#Notes: Put nCoV.fa file in the fold named "library" in "./YourDBpath/". Download taxonomy file from NCBI and put in "./YourDBpath/“. Detailed description about Kraken index can be found in the website http://ccb.jhu.edu/software/kraken/MANUAL.html#custom-databases.```
+#Notes: Put nCoV.fa file in the fold named "library" in "./YourDBpath/". 
+#Download taxonomy file from NCBI and put in "./YourDBpath/“. 
+#Detailed description about Kraken index can be found in the 
+#website http://ccb.jhu.edu/software/kraken/MANUAL.html#custom-databases.
 ```
 2.Build BWA index:
 `bwa -index HCoV-19.fa`
@@ -42,21 +43,25 @@ kraken-build --build --threads 8 --db ./YourDBpath/
 4.Edit the input.config file, and change each software and database path to your own path.
 ```
 perl nCoV_Finder.pl -i data.txt -c input.config -o ./outpath/
-cd ./outpath/shellall
+cd ./outpath/shellall/
 sh allDependent.sh
-#Notes: data.txt includes three columns:  sample_name seq.1.fq.gz seq2.fq.gz```
+#Notes: data.txt includes three columns:  sample_name seq.1.fq.gz seq2.fq.gz
 ```
 ## Output
-1.De novo assembly from SPAdes
+1.*De novo* assembly from SPAdes
 ```
-./outpath/05.ASS/sample/scaffolds.fasta   #original fasta file from SPAdes
-./outpath/05.ASS/sample/scaffolds_longest.fasta #longest contig
+#original fasta file from SPAdes
+./outpath/05.ASS/sample/scaffolds.fasta   
+#longest contig
+./outpath/05.ASS/sample/scaffolds_longest.fasta 
 ```
 2.Consensus sequence from Pilon
 ```
-./outpath/06.CNS/sample/sample.pilon.fasta #original fasta file from pilon
-./outpath/06.CNS/sample/sample.masked.fasta #consensus after masked position with depth lower 10X
+#original fasta file from pilon
+./outpath/06.CNS/sample/sample.pilon.fasta 
+#consensus after masked position with depth lower 10X
+./outpath/06.CNS/sample/sample.masked.fasta
 ```
 ## Additional Information
-For De novo assembly, if too much data was left after “Remove low complexity reads”, to reduce the burden of computing, the data can be downsized to a certain amount (Such as data amount equivalent to about 100X of HCoV-19 genome).
+For *De novo* assembly, if too much data was left after “Remove low complexity reads”, to reduce the burden of computing, the data can be downsized to a certain amount (Such as data amount equivalent to about 100X of HCoV-19 genome).
 For consensus from pilon, the default depth cutofff was set to 10X, and the position with depth lower than 10X would be masked to N.
