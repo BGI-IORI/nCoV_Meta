@@ -11,16 +11,16 @@ python: v2.7.16
 java: v1.8.0 
 
 For HCoV-19 like reads classification:  
-* Kraken v1.1 (https://github.com/DerrickWood/kraken)
+* Kraken v1.1 (https://github.com/DerrickWood/kraken)  
 For data quality control:  
 * Fastp v0.19.5 (https://github.com/OpenGene/fastp)
-* SOAPnuke v1.5.6 (https://github.com/BGI-flexlab/SOAPnuke)
+* SOAPnuke v1.5.6 (https://github.com/BGI-flexlab/SOAPnuke)  
 For low complexity reads removing:
-* PRINSEQ v0.20.4 (http://prinseq.sourceforge.net/)
+* PRINSEQ v0.20.4 (http://prinseq.sourceforge.net/)  
 For virus genome De novo assembly:  
-* SPAdes v3.14.0 (http://cab.spbu.ru/software/spades/)
+* SPAdes v3.14.0 (http://cab.spbu.ru/software/spades/)  
 For reference based consensus construction
-* Pilon v1.23 (https://github.com/broadinstitute/pilon)
+* Pilon v1.23 (https://github.com/broadinstitute/pilon)  
 Other required tools:  
 * Picard v2.10.10 (https://broadinstitute.github.io/picard/)
 * Samtools v1.9 (http://samtools.sourceforge.net/)
