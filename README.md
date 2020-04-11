@@ -40,8 +40,8 @@ git clone https://github.com/BGI-IORI/nCoV.git
 ## Usage
 Two sequence databases are inclued in the pipeline:  
 * CoV.fa, include coronaviridae virus sequences for Kraken classification. 
-* HCoV-19.fa, included in the reference genome of HCoV-19.  
-Note: Users can change the database according to their needs.  
+* HCoV-19.fa, included in the reference genome of HCoV-19.    
+Notes: Users can change the database according to their needs.  
 
 1.Build Kraken database index:
 ```
