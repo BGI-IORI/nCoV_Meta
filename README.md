@@ -62,7 +62,7 @@ bwa -index HCoV-19.fa
 samtools faidx HCoV-19.fa
 ```
 
-4.Edit the input.config file, and change each software and database path to your own path.
+4.Edit the input.config file, and change the software and database path to your own path.
 ```
 perl nCoV_Finder.pl -i data.txt -c input.config -o ./outpath/
 cd ./outpath/shellall/
