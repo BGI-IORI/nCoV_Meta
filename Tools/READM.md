@@ -1,1 +1,1 @@
-This folder provides some executable files of the software related in the pipeline. The user could try these softwares, but due to different system environments, they may not be able to run directly. We recommend users to install the softwares according to their manuals.
+This folder provides some executable files of the software related in the pipeline. The users could try these softwares, but due to different system environments, they may not be able to run directly. We recommend users to install the softwares according to their manuals.
