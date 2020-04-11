@@ -52,13 +52,12 @@ kraken-build --build --threads 8 --db ./YourDBpath/
 #Brefily, the user should put CoV.fa file in the fold named "library" in "./YourDBpath/",  
 #Download taxonomy file (ftp://ftp.ncbi.nih.gov/pub/taxonomy) from NCBI and put it in "./YourDBpath/".
 #And then run the command to build the kraken index.
-
 ```
 2)Build BWA index:
 ```
 bwa -index HCoV-19.fa
 ```
-3)samtools index:
+3)Build samtools index:
 ```
 samtools faidx HCoV-19.fa
 ```
