@@ -56,7 +56,7 @@ kraken-build --build --threads 8 --db ./YourDBpath/
 ```
 2)Build BWA index:
 ```
-bwa -index HCoV-19.fa
+bwa index HCoV-19.fa
 ```
 3)Build samtools index:
 ```
@@ -69,8 +69,7 @@ samtools faidx HCoV-19.fa
 perl nCoV_Finder.pl -i data.txt -c input.config -o ./outpath/
 cd ./outpath/shellall/
 sh allDependent.sh
-#Notes: 
-#data.txt includes three columns:  sample_name seq.1.fq.gz seq2.fq.gz
+#Notes: data.txt includes three columns:  sample_name seq.1.fq.gz seq2.fq.gz
 ```
 ## Output
 1.*De novo* assembly from SPAdes
