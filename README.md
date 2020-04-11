@@ -32,17 +32,19 @@ Other required softwares:
 * Samtools v1.9 (http://samtools.sourceforge.net/)
 * bedtools v2.23.0 (https://bedtools.readthedocs.io/en/latest/)
 
-# Installation
+## Installation
 ```
 git clone https://github.com/BGI-IORI/nCoV.git
+#Notes: The above dependent software needs to be installed separately. After installing, the users should edit the input.config file, and change the software path to your own path.
 ```
 
 ## Usage
-Notes: Two sequence databases are inclued in the pipeline, and the users can customize their own databases. 
+### 1.Build the index for database
+Notes: Two sequence databases are included in the pipeline, and the users can customize their own databases. 
 * CoV.fa, include coronaviridae virus sequences for Kraken classification. 
-* HCoV-19.fa, include the reference genome of HCoV-19.     
+* HCoV-19.fa, include the reference genome of HCoV-19.  
 
-1.Build Kraken database index:
+1)Build Kraken database index:
 ```
 kraken-build --build --threads 8 --db ./YourDBpath/ 
 #Notes: Detailed description about Kraken index can be found in the 
@@ -52,16 +54,17 @@ kraken-build --build --threads 8 --db ./YourDBpath/
 #And then run the command to build the kraken index.
 
 ```
-2.Build BWA index:
+2)Build BWA index:
 ```
 bwa -index HCoV-19.fa
 ```
-3.samtools index:
+3)samtools index:
 ```
 samtools faidx HCoV-19.fa
 ```
+4)Edit the input.config file, and change the database path to your own path.
 
-4.Edit the input.config file, and change the software and database path to your own path.
+### 2.Run the pipeline.
 ```
 perl nCoV_Finder.pl -i data.txt -c input.config -o ./outpath/
 cd ./outpath/shellall/
