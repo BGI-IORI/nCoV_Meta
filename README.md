@@ -20,7 +20,7 @@ Softwares for data quality control:
 Software for low complexity reads removing:
 * PRINSEQ v0.20.4 (http://prinseq.sourceforge.net/)  
 
-Software for virus genome De novo assembly:  
+Software for virus genome *De novo* assembly:  
 * SPAdes v3.14.0 (http://cab.spbu.ru/software/spades/)  
 
 Software for reference based consensus construction
