@@ -1,1 +1,1 @@
-You could try these software directly, if they can be run directly.
+This folder provides some executable files of the software related in the pipeline. The user could try these softwares, but due to different system environments, they may not be able to run directly. We recommend users to install the softwares according to their manuals.
