@@ -10,23 +10,24 @@ perl: v5.22.0
 python: v2.7.16   
 java: v1.8.0  
 
-For HCoV-19 like reads classification:  
+Software for CoV-like reads classification:  
 * Kraken v1.1 (https://github.com/DerrickWood/kraken)  
 
-For data quality control:  
+Softwares for data quality control:  
 * Fastp v0.19.5 (https://github.com/OpenGene/fastp)
 * SOAPnuke v1.5.6 (https://github.com/BGI-flexlab/SOAPnuke)  
 
-For low complexity reads removing:
+Software for low complexity reads removing:
 * PRINSEQ v0.20.4 (http://prinseq.sourceforge.net/)  
 
-For virus genome De novo assembly:  
+Software for virus genome De novo assembly:  
 * SPAdes v3.14.0 (http://cab.spbu.ru/software/spades/)  
 
-For reference based consensus construction
+Software for reference based consensus construction
 * Pilon v1.23 (https://github.com/broadinstitute/pilon)  
 
-Other required tools:  
+Other required softwares:  
+* BWA v0.7.16 (https://github.com/lh3/bwa)
 * Picard v2.10.10 (https://broadinstitute.github.io/picard/)
 * Samtools v1.9 (http://samtools.sourceforge.net/)
 * bedtools v2.23.0 (https://bedtools.readthedocs.io/en/latest/)
@@ -37,14 +38,20 @@ git clone https://github.com/BGI-IORI/nCoV.git
 ```
 
 ## Usage
+Two sequence databases are inclued in the pipeline:  
+* CoV.fa, include coronaviridae virus sequences for Kraken classification. 
+* HCoV-19.fa, included in the reference genome of HCoV-19.  
+Note: Users can change the database according to their needs.  
+
 1.Build Kraken database index:
 ```
 kraken-build --build --threads 8 --db ./YourDBpath/ 
-#Notes: 
-#Put CoV.fa file in the fold named "library" in "./YourDBpath/". 
-#Download taxonomy file from NCBI and put in "./YourDBpath/“. 
-#Detailed description about Kraken index can be found in the 
+#Notes: Detailed description about Kraken index can be found in the 
 #website http://ccb.jhu.edu/software/kraken/MANUAL.html#custom-databases.
+#Brefily, the user should put CoV.fa file in the fold named "library" in "./YourDBpath/",  
+#Download taxonomy file (ftp://ftp.ncbi.nih.gov/pub/taxonomy) from NCBI and put it in "./YourDBpath/".
+#And then run the command to build the kraken index.
+
 ```
 2.Build BWA index:
 ```
